@@ -1,0 +1,137 @@
+.form-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="date"],
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.form-group textarea {
+  min-height: 150px;
+  font-family: inherit;
+}
+
+.form-button {
+  display: inline-block;
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.form-button:hover {
+  background-color: #0056b3;
+}
+.form-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.error-msg {
+    color: red;
+    word-break: break-word;
+    margin-top: 10px;
+}
+
+/* --- FOTOĞRAF GALERİSİ STİLLERİ --- */
+
+.image-upload-grid {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 15px; /* Boşluğu biraz artırdık */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.image-preview-box, .add-image-box {
+    width: 100px;  
+    height: 100px; 
+    border-radius: 8px;
+    /* overflow: hidden; -- Bunu kaldırdık ki buton dışarı taşarsa kesilmesin */
+    position: relative; /* Buton buna göre konumlanacak */
+    border: 2px solid #eee;
+    box-sizing: border-box;
+}
+
+.image-preview-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 6px; /* Resmin köşelerini yuvarla */
+}
+
+.add-image-box {
+    border: 2px dashed #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    transition: all 0.2s ease;
+}
+
+.add-image-box:hover {
+    background-color: #eef6ff;
+    border-color: #007bff;
+}
+
+.add-image-box span {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 4px;
+}
+
+/* --- GÜÇLENDİRİLMİŞ SİLME BUTONU --- */
+.remove-btn {
+    position: absolute;
+    top: -8px;  /* Kutunun biraz dışına taşır */
+    right: -8px; /* Kutunun biraz dışına taşır */
+    background-color: #dc3545; /* Parlak kırmızı */
+    color: white;
+    border: 2px solid white; /* Beyaz çerçeve */
+    border-radius: 50%; /* Tam yuvarlak */
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    z-index: 100; /* En üstte olduğundan emin ol */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Gölge ekle */
+    padding: 0;
+}
+.remove-btn:hover {
+    background-color: #a71d2a;
+    transform: scale(1.1); /* Üzerine gelince büyüsün */
+}

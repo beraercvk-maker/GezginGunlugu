@@ -1,0 +1,41 @@
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
+
+#nullable disable
+
+namespace backend.Migrations
+{
+    /// <inheritdoc />
+    public partial class AddDiscoverFeatures : Migration
+    {
+        /// <inheritdoc />
+        protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.AddColumn<bool>(
+                name: "IsPublic",
+                table: "TravelLogs",
+                type: "bit",
+                nullable: false,
+                defaultValue: false);
+
+            migrationBuilder.AddColumn<DateTime>(
+                name: "LikeDate",
+                table: "Likes",
+                type: "datetime2",
+                nullable: false,
+                defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
+        }
+
+        /// <inheritdoc />
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DropColumn(
+                name: "IsPublic",
+                table: "TravelLogs");
+
+            migrationBuilder.DropColumn(
+                name: "LikeDate",
+                table: "Likes");
+        }
+    }
+}
