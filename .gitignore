@@ -1,0 +1,9 @@
+# Node klasörleri (Frontend için)
+node_modules/
+dist/
+.env
+
+# .NET klasörleri (Backend için)
+bin/
+obj/
+appsettings.Development.json
