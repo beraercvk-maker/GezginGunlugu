@@ -1,0 +1,166 @@
+/* Navbar Ana Kutusu */
+.navbar {
+  /* Sabitleme */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  z-index: 1000;
+  
+  /* YENİ: Saydam ve Buzlu Cam (Glassmorphism) Görünümü */
+  background-color: rgba(255, 255, 255, 0.15); /* %15 Beyazlık (Şeffaf) */
+  backdrop-filter: blur(10px); /* Arkasındaki görüntüyü flu yap */
+  -webkit-backdrop-filter: blur(10px); /* Safari tarayıcı desteği */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Çok hafif alt çizgi */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Yumuşak gölge */
+  
+  padding: 0.8rem 2rem;
+  box-sizing: border-box; 
+
+  /* Hizalama */
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+}
+
+/* --- Sol Taraf: Logo --- */
+.navbar-brand a {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #007bff; /* Logonun rengi */
+  text-decoration: none;
+  letter-spacing: -0.5px;
+  /* Saydam arka planda daha iyi okunması için hafif gölge */
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.5); 
+}
+.navbar-brand a:hover {
+  color: #0056b3;
+}
+
+/* --- Sağ Taraf: Menü --- */
+.navbar-nav {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  align-items: center;
+}
+
+/* Admin Linki */
+.admin-link {
+  color: #dc3545 !important;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+.admin-link:hover {
+  text-decoration: underline;
+}
+
+/* Profil Menüsü ve Butonlar */
+.profile-dropdown {
+  position: relative; 
+}
+
+/* "Merhaba, İsim" butonu */
+.profile-button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333; /* Koyu gri yazı */
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: inherit;
+  /* Yazının okunabilirliğini artırmak için */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); 
+}
+.profile-button:hover {
+  color: #007bff;
+}
+
+/* Giriş Butonu */
+.login-button {
+  background-color: #007bff;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px; /* Oval buton */
+  border: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-family: inherit;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3); /* Butona parlaklık ver */
+}
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+/* --- Açılır Menü (Dropdown) --- */
+.dropdown-menu {
+  position: absolute;
+  top: 120%; 
+  right: 0;
+  width: 200px;
+  background-color: rgba(255, 255, 255, 0.95); /* Hafif şeffaf beyaz */
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  padding: 0.5rem 0;
+  list-style: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  z-index: 1001;
+}
+
+/* Menüdeki ok işareti */
+.dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  right: 20px;
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.95);
+  transform: rotate(45deg);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Menüdeki Linkler ve Butonlar */
+.dropdown-menu li a,
+.dropdown-button {
+  display: block;
+  width: 100%;
+  padding: 0.8rem 1.5rem;
+  text-align: left;
+  color: #444;
+  text-decoration: none;
+  font-size: 0.95rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.dropdown-menu li a:hover,
+.dropdown-button:hover {
+  background-color: rgba(0, 123, 255, 0.1); /* Hafif mavi hover */
+  color: #007bff;
+}
+
+.dropdown-logout {
+  color: #dc3545;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  margin-top: 0.5rem;
+  padding-top: 0.8rem;
+}
+.dropdown-logout:hover {
+  background-color: #fff5f5;
+  color: #b02a37;
+}
