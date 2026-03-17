@@ -1,10 +1,10 @@
-# 🌍 Gezgin Günlüğü (Travel Diary & Management)
+#  Gezgin Günlüğü (Travel Diary & Management)
 
 Gezgin Günlüğü, kullanıcıların seyahat anılarını ve lokasyon/şirket bazlı kayıtlarını tutabildiği, fotoğraflar ekleyebildiği Full-Stack bir web uygulamasıdır. 
 
 Modern web mimarisine uygun olarak Backend ve Frontend birbirinden bağımsız (API tabanlı) çalışacak şekilde tasarlanmıştır. Güvenlik için JWT (JSON Web Token) kimlik doğrulaması kullanılmıştır.
 
-## 🚀 Kullanılan Teknolojiler
+##  Kullanılan Teknolojiler
 
 **Backend:**
 * C# & .NET Core Web API
@@ -18,7 +18,7 @@ Modern web mimarisine uygun olarak Backend ve Frontend birbirinden bağımsız (
 * Axios (API İstekleri)
 * LocalStorage / SessionStorage (Token Yönetimi)
 
-## 🛠️ Kurulum ve Çalıştırma
+## Kurulum ve Çalıştırma
 
 Projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları izleyebilirsiniz.
 
@@ -33,5 +33,5 @@ Projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları i
 2. Gerekli paketleri indirmek için `npm install` komutunu çalıştırın.
 3. Uygulamayı başlatmak için `npm run dev` komutunu kullanın. (Frontend **http://localhost:3000** portunda çalışacaktır).
 
-## 🔒 Güvenlik Notu
+##  Güvenlik Notu
 Bu repoda güvenlik sebebiyle veritabanı bağlantı cümlesi (ConnectionString), JWT gizli anahtarı ve SMTP mail şifreleri `appsettings.json` içinden gizlenmiştir. Projeyi denerken bu alanları kendi bilgilerinizle doldurmanız gerekmektedir.
