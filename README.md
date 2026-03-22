@@ -26,12 +26,12 @@ Projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları i
 1. Repoyu bilgisayarınıza indirin: `git clone https://github.com/beraercvk-maker/GezginGunlugu.git`
 2. `backend` klasörüne gidin ve `appsettings.json` dosyasını kendi veritabanı ve mail bilgilerinize göre güncelleyin.
 3. Terminalde `dotnet ef database update` komutu ile veritabanını oluşturun.
-4. `dotnet run` komutu ile projeyi ayağa kaldırın. (Backend **http://localhost:5000** portunda çalışacaktır).
+4. `dotnet run` komutu ile projeyi ayağa kaldırın. (Backend **http://localhost:5252** portunda çalışacaktır).
 
 ### 2. Frontend Kurulumu
 1. Terminalde `frontend` klasörünün içine girin.
 2. Gerekli paketleri indirmek için `npm install` komutunu çalıştırın.
-3. Uygulamayı başlatmak için `npm run dev` komutunu kullanın. (Frontend **http://localhost:3000** portunda çalışacaktır).
+3. Uygulamayı başlatmak için `npm run dev` komutunu kullanın. (Frontend **http://localhost:5173** portunda çalışacaktır).
 
 ##  Güvenlik Notu
 Bu repoda güvenlik sebebiyle veritabanı bağlantı cümlesi (ConnectionString), JWT gizli anahtarı ve SMTP mail şifreleri `appsettings.json` içinden gizlenmiştir. Projeyi denerken bu alanları kendi bilgilerinizle doldurmanız gerekmektedir.
